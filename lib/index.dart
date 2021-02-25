@@ -9,16 +9,27 @@ class _IndexState extends State<Index> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: buildAppBar(),
-      body: new ListView(
-        children: <Widget>[
-          new Container(
-            child: Text('1'),
-          )
-        ],
-      ),
-    );
+        extendBodyBehindAppBar: true,
+        appBar: buildAppBar(),
+        body: new Column(
+          children: [
+            new Container(
+              height: 20,
+              color: Colors.blue,
+              child: Text('1'),
+            ),
+            new Container(
+              height: 50,
+              color: Colors.black,
+              child: Text('1'),
+            ),
+            new Container(
+              height: 30,
+              color: Colors.yellow,
+              child: Text('1'),
+            )
+          ],
+        ));
   }
 
   AppBar buildAppBar() {
