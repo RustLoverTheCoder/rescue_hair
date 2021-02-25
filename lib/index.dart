@@ -9,38 +9,34 @@ class _IndexState extends State<Index> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
-              icon: ClipOval(
-                child: new Image.asset("assets/images/avatar.jpeg"),
-              ),
-              onPressed: () {})
-        ],
-      ),
+      extendBodyBehindAppBar: true,
+      appBar: buildAppBar(),
       body: new ListView(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              new Column(),
-              new Column(
-                children: <Widget>[
-                  new Container(
-                    height: 90,
-                    color: Colors.black,
-                    child: Text('12'),
-                  )
-                ],
-              ),
-            ],
+          new Container(
+            child: Text('1'),
           )
         ],
       ),
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      leading: IconButton(
+        icon: Icon(Icons.menu),
+        color: Colors.black,
+        onPressed: () {},
+      ),
+      actions: [
+        IconButton(
+            icon: ClipOval(
+              child: new Image.asset("assets/images/avatar.jpeg"),
+            ),
+            onPressed: () {})
+      ],
     );
   }
 }
